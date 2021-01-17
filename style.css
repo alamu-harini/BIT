@@ -1,0 +1,255 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Roboto:wght@100;300;400;500&display=swap');
+html, body{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+body{
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+  font-family:"Roboto", monospace;
+}
+
+.search{
+    height: 40px;
+    width: 100%;
+    top: 0px;
+    position: absolute;
+}
+
+.zoom{
+    background:#242f3e;
+    height: 100vh;
+    width: auto;
+    overflow: hidden;
+}
+
+.zoom img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vh;
+    height: 100vh;
+  }
+
+.route{
+    
+    position: absolute;
+    bottom:0px;
+    right: 0px;
+    width: 100%;
+    height: 7%;
+    transition: 0.4s;
+    
+}
+
+.route.nav-active{
+    height: 40%;
+}
+
+.route .nav-button {
+    width: 100%;
+    height: auto;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.route .nav-button button{
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background: #2f3640;
+    border-style: none;
+    width: 50px;
+    height: 50px;
+    outline: none;
+}
+
+ .distance{
+   position: relative;
+    color: #ffffff;
+    margin: 10px;
+    width: 100%;
+    
+}
+
+.route .route-wrapper{
+  height: 100%;
+  width: 100%;
+  float: left;
+  background-color: #2f3640;
+  border-radius: 8px;
+}
+
+.route .navigation{
+    
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #2f3640;
+   color: #ffffff;
+   -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+}
+
+.route .navigation::-webkit-scrollbar {
+  display: none;
+}
+
+.route .navigation ul{
+    width: 100%;
+    overflow: hidden;
+    padding-left: 0px;
+    
+}
+
+.route .navigation ul li{
+    list-style: none;
+    margin: 10px;
+    padding-left: 10px;
+    height: 50px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #414b57;
+    border-radius: 5%;
+}
+
+  .select-box {
+    display: flex;
+    width: auto;
+    flex-direction: column;
+  }
+  
+  .select-box .options-container {
+    background: #2f3640;
+    color: #f5f6fa;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    overflow: hidden;
+
+    order: 1;
+  }
+  
+  .selected {
+    background: #2f3640;
+    margin-bottom: 0px;
+    color: #f5f6fa;
+    position: relative;
+  
+    order: 0;
+  }
+  
+  .selected::after {
+    content: "";
+    background: url("./img/arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  
+    position: absolute;
+    height: 100%;
+    width: 32px;
+    right: 10px;
+    top: 5px;
+  
+    transition: all 0.4s;
+  }
+  
+  .select-box .options-container.active {
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+  }
+  
+  .select-box .options-container.active + .selected::after {
+    transform: rotateX(180deg);
+    top: -6px;
+  }
+  
+  .select-box .options-container::-webkit-scrollbar {
+    width: 8px;
+    background: #0d141f;
+    
+  }
+  
+  .select-box .options-container::-webkit-scrollbar-thumb {
+    background: #525861;
+  }
+  
+  .select-box .option,
+  .selected {
+    padding: 12px 24px;
+    cursor: pointer;
+  }
+  
+  .select-box .option:hover {
+    background: #414b57;
+  }
+  
+  .select-box label {
+    cursor: pointer;
+  }
+  
+  .select-box .option .radio {
+    display: none;
+  }
+
+
+
+
+
+
+
+  
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+    .search{width: 500px; top: 10px; left: 10px;}
+
+    .route{width: 450px; bottom: 10px; right: 10px;}
+
+    .map{width: 100%;}
+
+    .select-box .options-container {
+        border-radius: 8px;
+      }
+
+      .select-box .options-container::-webkit-scrollbar {
+        
+        border-radius: 0 8px 8px 0;
+      }
+      
+      .select-box .options-container::-webkit-scrollbar-thumb {
+        
+        border-radius: 0 8px 8px 0;
+      }
+
+      .selected {
+        border-radius: 8px;
+      }
+  }

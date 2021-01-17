@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIT</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="zoom">
+      <img
+        id="map"
+        class="media"
+        src="img/original with block.png"
+        alt="test1"
+      />
+    </div>
+    <div class="route">
+      <div class="nav-button">
+        <button onclick="changeview()">
+          <img src="./img/arrow.svg" alt="close" />
+        </button>
+      </div>
+      <div class="route-wrapper">
+      <h3 id="distance" class="distance"></h3>
+      <div class="navigation">
+        <ul id="directions"class="direction"></ul>
+      </div>
+    </div>
+    </div>
+    <div class="search">
+      <div class="select-box">
+        <div class="options-container">
+          <div class="option">
+            <input type="radio" class="radio" id="film" name="category" />
+            <label id="main_gate_to_boys_hostel"
+              >Main Gate To Boys Hostel</label
+            >
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="science" name="category" />
+            <label id="main_gate_to_principal_office"
+              >Main Gate To Principal Office</label
+            >
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="art" name="category" />
+            <label id="main_gate_to_girls_hostel"
+              >Main Gate To Girls Hostel</label
+            >
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="music" name="category" />
+            <label id="main_gate_to_parking">Main Gate To Parking</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="travel" name="category" />
+            <label id="parking_to_principal_office"
+              >Parking To Principal Office</label
+            >
+          </div>
+        </div>
+
+        <div class="selected">Choose Navigation</div>
+      </div>
+    </div>
+
+    
+  </body>
+  <script src="./js/test.js"></script>
+  <script src="./js/main.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</html>
